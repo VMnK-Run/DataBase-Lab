@@ -46,7 +46,7 @@ CREATE TABLE titles(
     from_date DATE NOT NULL,
     to_date DATE NOT NULL,
     CONSTRAINT pk_titles PRIMARY KEY(emp_no, from_date),
-    CONSTRAINT pk_titles_employees FOREIGN KEY(emp_no) REFERENCES employees(emp_no) ON DELETE CASCADE ON UPDATE CASCADE
+    CONSTRAINT fk_titles_employees FOREIGN KEY(emp_no) REFERENCES employees(emp_no) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE TABLE salaries(
@@ -55,5 +55,5 @@ CREATE TABLE salaries(
     from_date DATE NOT NULL,
     to_date DATE NOT NULL,
     CONSTRAINT pk_salaries PRIMARY KEY(emp_no, from_date),
-    CONSTRAINT pk_salaries_employees FOREIGN KEY(emp_no) REFERENCES employees(emp_no) ON DELETE CASCADE ON UPDATE CASCADE
+    CONSTRAINT fk_salaries_employees FOREIGN KEY(emp_no) REFERENCES employees(emp_no) ON DELETE CASCADE ON UPDATE CASCADE
 );
