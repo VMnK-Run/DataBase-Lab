@@ -13,6 +13,8 @@ SELECT COUNT(*) FROM dept_emp;
 SELECT COUNT(*) FROM titles;
 SELECT COUNT(*) FROM salaries;
 
+SELECT * FROM salaries WHERE emp_no = 10001;
+
 #5.1 返回前10条员工记录
 SELECT * 
 FROM employees 
